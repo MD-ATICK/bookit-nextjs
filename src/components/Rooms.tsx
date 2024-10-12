@@ -1,8 +1,8 @@
-import { room } from "@/types/type"
+import { Models } from "node-appwrite"
 import RoomCard from "./RoomCard"
 
 interface props {
-    rooms: room[]
+    rooms: Models.Document[]
 }
 
 export default function Rooms({ rooms }: props) {

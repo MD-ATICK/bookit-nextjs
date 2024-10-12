@@ -1,10 +1,14 @@
+import { getAllRooms } from '@/actions/getAllRooms'
 import Rooms from '@/components/Rooms'
-import rooms from '@/data/rooms.json'
 
-export default function RoomsPage() {
+export default async function RoomsPage() {
+
+
+  const rooms = await getAllRooms()
+
   return (
     <div className='   py-10'>
-        <Rooms rooms={rooms} />
+      <Rooms rooms={rooms} />
     </div>
   )
 }
