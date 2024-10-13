@@ -44,7 +44,7 @@ export default function ContactForm() {
 
         <form onSubmit={handleSubmit} className="space-y-8">
             <div>
-                <label htmlFor="name" className="block text-lg lg:text-2xl text-gray-800 mb-2">
+                <label htmlFor="name" className="block text-lg lg:text-2xl mb-2">
                     Name
                 </label>
                 <Input
@@ -52,14 +52,14 @@ export default function ContactForm() {
                     id="name"
                     name="name"
                     disabled={isLoading}
-                    className=" text-black"
+                    className=" "
                     // value={formData.name}
                     // onChange={handleChange}
                     required
                 />
             </div>
             <div>
-                <label htmlFor="email" className="block text-lg lg:text-xl text-gray-800 mb-2">
+                <label htmlFor="email" className="block text-lg lg:text-xl mb-2">
                     Email
                 </label>
                 <Input
@@ -69,12 +69,12 @@ export default function ContactForm() {
                     disabled={isLoading}
                     // value={formData.email}
                     // onChange={handleChange}
-                    className=" text-black"
+                    className=" "
                     required
                 />
             </div>
             <div>
-                <label htmlFor="message" className="block text-lg lg:text-2xl text-gray-800 mb-2">
+                <label htmlFor="message" className="block text-lg lg:text-2xl mb-2">
                     Message
                 </label>
                 <Textarea
@@ -84,7 +84,7 @@ export default function ContactForm() {
                     // onChange={handleChange}
                     rows={5}
                     disabled={isLoading}
-                    className=" text-black"
+                    className=" "
                     required
                 />
             </div>

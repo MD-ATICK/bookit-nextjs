@@ -4,17 +4,17 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: `${process.env.NEXT_WEB_NAME} Login`,
-    description: 'Access your Bookify account to manage bookings, view reservations, and find the best hotel deals. Secure and fast login to your favorite hotel booking platform.',
-    keywords: ['bookify', `${process.env.NEXT_WEB_NAME} Login`, 'bookify login'],
+    description: 'Access your bookplus account to manage bookings, view reservations, and find the best hotel deals. Secure and fast login to your favorite hotel booking platform.',
+    keywords: ['bookplus', `${process.env.NEXT_WEB_NAME} Login`, 'bookplus login'],
     robots: {
         index: true, // Allow search engines to index the login page
         follow: true, // Follow links on this page
     },
     openGraph: {
-        title: 'Login to Bookify | Hotel Booking Made Easy',
-        description: 'Login to Bookify to access and manage your bookings with ease.',
+        title: 'Login to bookplus | Hotel Booking Made Easy',
+        description: 'Login to bookplus to access and manage your bookings with ease.',
         url: `${process.env.NEXT_DEPLOY_WEB_URL}/login`,
-        siteName: 'Bookify',
+        siteName: 'bookplus',
         type: 'website',
     },
 };

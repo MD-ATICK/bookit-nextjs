@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   applicationName: `${process.env.NEXT_WEB_NAME}`,
   title: process.env.NEXT_WEB_TITLE,
   description: process.env.NEXT_WEB_DESCRIPTION,
-  keywords: [process.env.NEXT_WEB_NAME!, 'bookify', 'best hotel for couples in chittagong', 'Best hotel for couples in Chittagong', 'best hotel for couples in chittagong city'],
+  keywords: ['bookplus', 'BookPlus', 'Book Plus', 'book plus', 'bookplus vercel app', 'BookPlus vercel app', 'best hotel for couples in chittagong', 'Best hotel for couples in Chittagong', 'best hotel for couples in chittagong city'],
   icons: {
     icon: '/favicon.ico', // favicon for the website
   },
