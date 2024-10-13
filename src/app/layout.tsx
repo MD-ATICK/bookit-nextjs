@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] })
@@ -55,6 +56,18 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_URL}`} />
         <meta name="google-site-verification" content="6GmT2Do1lN7VtwEFDc82A70PsvPJHHw07NtB75FFIew" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TWRTGRMMQ7"></Script>
+        <Script
+          id="G-TWRTGRMMQ7"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TWRTGRMMQ7');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${montserrat.className} antialiased container mx-auto`}
