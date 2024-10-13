@@ -1,16 +1,18 @@
+import { checkAuth } from "@/lib/actions/checkAuth";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import SignOutBtn from "./SignOutBtn";
 import { Button } from "./ui/button";
 
-export default function ActionsHeader() {
-    const loggedIn = true;
+export default async function ActionsHeader() {
+    const { isAuthenticated } = await checkAuth();
+
     return (
         <div className=" flex items-center gap-3">
             <ModeToggle />
 
             {
-                loggedIn &&
+                isAuthenticated &&
                 <>
                     <Button>
                         <Link href={'/my-rooms'} className=" h-full w-full">My Rooms</Link>
@@ -19,7 +21,7 @@ export default function ActionsHeader() {
                 </>
             }
             {
-                !loggedIn &&
+                !isAuthenticated &&
                 <>
                     <Button>
                         <Link href={'/login'} className=" h-full w-full">Login</Link>

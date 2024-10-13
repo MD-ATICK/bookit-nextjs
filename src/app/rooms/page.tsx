@@ -1,5 +1,5 @@
-import { getAllRooms } from '@/actions/getAllRooms'
 import Rooms from '@/components/Rooms'
+import { getAllRooms } from '@/lib/actions/getAllRooms'
 
 export default async function RoomsPage() {
 

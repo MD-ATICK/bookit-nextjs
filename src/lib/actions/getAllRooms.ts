@@ -1,8 +1,8 @@
 "use server"
 
+import { createAdminClient } from '@/lib/server/appwrite'
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
-import { createAdminClient } from "../lib/server/appwrite"
 
 
 export const getAllRooms = async () => {
@@ -11,13 +11,12 @@ export const getAllRooms = async () => {
         const { databases } = await createAdminClient()
 
         const { documents } = await databases.listDocuments(
-            process.env.NEXT_PUBLIC_APP_WRITE_DATABASE!,
-            process.env.NEXT_PUBLIC_APP_WRITE_COLLECTION_ROOMS!
+            process.env.NEXT_PUBLIC_APPWRITE_DATABASE!,
+            process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS!
         )
 
         revalidatePath('/')
-        console.log('rooms', documents.length)
-        return [];
+        return documents;
     } catch (error) {
         console.log(error)
         redirect('/error')
