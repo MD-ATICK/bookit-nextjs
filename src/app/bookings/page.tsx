@@ -6,7 +6,7 @@ export default async function BookingsPage() {
 
   const { myBookings } = await getMyBookings()
 
-  if (!myBookings || myBookings?.length === 0) return <p>No bookings found!</p>;
+  if (!myBookings || myBookings?.length === 0) return <p className=" py-[5vw] text-sm font-medium">No bookings found!</p>;
 
   return (
     <div className="py-[4vw] px-[2vw] space-y-4">

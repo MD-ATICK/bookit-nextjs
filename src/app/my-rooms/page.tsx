@@ -8,7 +8,7 @@ export default async function MyRoomsPage() {
     return (
         <div>
             {rooms.length > 0 && <MyRooms rooms={rooms} />}
-            {rooms.length === 0 && <p className=' text-gray-300'> having no rooms!</p>}
+            {rooms.length === 0 && <p className=' text-sm font-medium py-[5vw] text-gray-300'> having no rooms!</p>}
         </div>
     )
 }

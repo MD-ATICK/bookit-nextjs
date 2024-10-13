@@ -1,5 +1,7 @@
 "use client"
+import logout from '@/assets/out.png';
 import { destroySession } from "@/lib/actions/destroySession";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
@@ -12,7 +14,7 @@ export default function SignOutBtn() {
     const [isLoading, setIsLoading] = useState(false);
 
     const handleSignOut = async () => {
-        // if (window.confirm('Are you sure you want to sign out?')) {
+        if (confirm('Are you sure you want to sign out?')) {
         setIsLoading(true)
         const data = await destroySession()
         setIsLoading(false)
@@ -25,15 +27,20 @@ export default function SignOutBtn() {
         if (data.error) {
             toast(data.error, { style: { backgroundColor: 'red' } })
         }
-        // }
+        }
     }
 
 
 
 
     return (
-        <Button onClick={handleSignOut} variant={'destructive'}>
+        <>
+        <Button className=" hidden sm:block" onClick={handleSignOut} variant={'destructive'}>
             {isLoading ? <ClipLoader size={20} color="white" /> : 'Sign Out'}
         </Button>
+        <Button className=" sm:hidden" onClick={handleSignOut} size={'icon'} variant={'destructive'}>
+            {isLoading ? <ClipLoader size={20} color="white" /> : <Image src={logout} height={25} alt="logout" />}
+        </Button>
+        </>
     )
 }
