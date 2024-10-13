@@ -10,11 +10,14 @@ export default function SliderMenu({ isAuthenticated, user }: { isAuthenticated:
     return (
         <Sheet>
             <SheetTrigger className=' md:hidden '>
-                <Image src={menu} height={35} alt="" className=' hover:bg-slate-900 border rounded-sm p-1' />
+                <Image src={menu} height={35} alt="" className=' bg-black hover:bg-slate-900 border rounded-sm p-1' />
             </SheetTrigger>
             <SheetContent>
                 <div className=" py-[5vh] h-screen flex flex-col justify-center items-center gap-6">
                     {/* <Link href={'/rooms'} >Rooms</Link> */}
+                    <SheetClose asChild>
+                        <Link href={'/'} >Home</Link>
+                    </SheetClose>
                     {
                         isAuthenticated &&
                         <SheetClose asChild>

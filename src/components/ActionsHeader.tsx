@@ -14,14 +14,14 @@ export default async function ActionsHeader() {
             <SliderMenu user={user} isAuthenticated={isAuthenticated} />
             {
                 isAuthenticated && user?.labels.includes('admin') &&
-                <>
-                    <Link href={'/my-rooms'} className=" ">
-                        <Button>
-                            My Rooms
-                        </Button>
-                    </Link>
-                    <SignOutBtn />
-                </>
+                <Link href={'/my-rooms'} className=" ">
+                    <Button>
+                        My Rooms
+                    </Button>
+                </Link>
+            }
+            {isAuthenticated &&
+            <SignOutBtn />
             }
             {
                 !isAuthenticated &&
@@ -31,7 +31,7 @@ export default async function ActionsHeader() {
                             Login
                         </Button>
                     </Link>
-                    <Link href={'/register'} className=" ">
+                    <Link href={'/register'} className=" hidden sm:block ">
                         <Button>
                             Register
                         </Button>

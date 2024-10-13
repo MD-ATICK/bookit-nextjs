@@ -26,7 +26,7 @@ export default function MyRoomCard({ room }: props) {
                 {/* ROOM DETAILS */}
                 <div className='flex flex-col  w-full justify-between h-full'>
                 <div className=' flex  w-2/3 py-1  flex-col text-xs md:text-sm gap-1'>
-                    <h2 className=' font-semibold text-xl md:text-2xl'>{name}</h2>
+                    <h2 className=' font-semibold text-[16px] sm:text-xl md:text-2xl'>{name}</h2>
                     <p className=' text-gray-400 hidden md:block'>Description : {description}</p>
                     <p className=' text-gray-400'>Address : {address}</p>
                     <p className=' text-gray-400'>Price : {`${price_per_hour}/hour`}</p>

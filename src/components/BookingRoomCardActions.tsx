@@ -25,10 +25,10 @@ export default function BookingRoomCardActions({ roomId, bookingId }: { roomId: 
     }
 
     return (
-        <div className='flex items-center justify-start gap-x-4'>
+        <div className='flex items-center justify-start gap-x-2'>
             <Link href={`/rooms/${roomId}`} className=''>
                 <Button>
-                    View Room
+                    View
                 </Button>
             </Link>
             <Button onClick={handleDelete} variant={'destructive'}>

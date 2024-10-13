@@ -38,14 +38,16 @@ export default function SingleRoomForm({ id }: { id: string }) {
                     disabled={isLoading}
                     type="date"
                     id="check_in_date"
+                    placeholder="01/01/2000"
                     name="check_in_date"
                     required={true}
-                />
+                    />
                 <Input
                     disabled={isLoading}
                     type="time"
                     id="check_in_time"
                     name="check_in_time"
+                    placeholder="11:00 PM"
                     required={true}
                 />
             </div>
@@ -55,12 +57,14 @@ export default function SingleRoomForm({ id }: { id: string }) {
                     type="date"
                     id="check_out_date"
                     name="check_out_date"
+                    placeholder="01/01/2000"
                     required={true}
                 />
                 <Input
                     disabled={isLoading}
                     type="time"
                     id="check_out_time"
+                    placeholder="11:00 PM"
                     name="check_out_time"
                     required={true}
                 />

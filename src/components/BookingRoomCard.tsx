@@ -35,9 +35,9 @@ export default function BookingRoomCard({ booking }: props) {
                     <Image src={imageUrl ?? '/src/assets/calendar.png'} fill sizes="200px" alt={description} />
                 </div>
                 {/* ROOM DETAILS */}
-                <div className='flex flex-col  w-full justify-between h-full'>
-                    <div className=' flex  w-2/3 py-1  flex-col text-xs md:text-sm gap-1'>
-                        <h2 className=' font-semibold text-xl md:text-2xl'>{name}</h2>
+                <div className='flex flex-col  w-full  justify-between h-full'>
+                    <div className=' flex  md:w-2/3 py-1 w-full  flex-col text-xs md:text-sm gap-1'>
+                        <h2 className=' font-semibold text-[16px] mb-1 sm:text-xl md:text-2xl'>{name}</h2>
                         <p className=' text-gray-400 hidden md:block'>{description}</p>
                         <br />
                         <p className=' font-medium'>Check In : {formatDate(booking.check_in)}</p>

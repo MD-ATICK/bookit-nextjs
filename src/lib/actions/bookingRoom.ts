@@ -29,6 +29,13 @@ export const bookingRoom = async (formData: FormData) => {
     
     const checkInDateTime = `${checkInDate}T${checkInTime}`;
     const checkOutDateTime = `${checkOutDate}T${checkOutTime}`;
+
+    const getTimeOfCheckInDateTime = new Date(checkInDateTime).getTime()
+    const getTimeOfCheckOutDateTime = new Date(checkOutDateTime).getTime()
+
+    if(getTimeOfCheckOutDateTime < getTimeOfCheckInDateTime){
+        return { error : 'Please select valid time!'}
+    }
     
     const isAvailable = await checkRoomAvailability(roomId, checkInDateTime, checkOutDateTime);
 
